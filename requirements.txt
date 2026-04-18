@@ -1,0 +1,35 @@
+# =========================================================
+# Core Testing Framework
+# =========================================================
+# Used for writing and executing test cases (similar to LeetCode validation)
+pytest==8.2.0
+
+# =========================================================
+# Code Coverage (Optional but recommended)
+# =========================================================
+# Measures how much of your codebase is covered by tests
+pytest-cov==5.0.0
+
+# =========================================================
+# Code Formatting
+# =========================================================
+# Automatically formats code to follow PEP 8 standards
+black==24.4.2
+
+# =========================================================
+# Linting
+# =========================================================
+# Fast and modern linter for detecting errors and enforcing code quality
+ruff==0.5.0
+
+# =========================================================
+# Static Type Checking (Optional but valuable)
+# =========================================================
+# Helps catch type-related issues before runtime
+mypy==1.10.0
+
+# =========================================================
+# Environment Variable Management (Optional)
+# =========================================================
+# Useful if environment configuration is added later
+python-dotenv==1.0.1

@@ -1,0 +1,93 @@
+# =========================
+# 🐍 Python bytecode
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# 🧪 Testing & Coverage
+# =========================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# =========================
+# 📦 Distribution / Packaging
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# =========================
+# 🧪 Virtual Environments
+# =========================
+venv/
+env/
+ENV/
+.venv/
+
+# =========================
+# 🔐 Environment Variables
+# =========================
+.env
+.env.*
+*.env
+
+# =========================
+# 📓 Jupyter Notebooks
+# =========================
+.ipynb_checkpoints/
+
+# =========================
+# 🧾 Logs & Debug
+# =========================
+*.log
+*.out
+*.err
+
+# =========================
+# 💻 IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =========================
+# 🍎 macOS
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =========================
+# 🪟 Windows
+# =========================
+Thumbs.db
+Desktop.ini
+
+# =========================
+# 🔄 Temporary / Swap Files
+# =========================
+*.swp
+*.swo
+*~
+*.tmp
+
+# =========================
+# 📊 Database / Local Files
+# =========================
+*.sqlite3
+*.db
+
+# =========================
+# 🔧 Misc
+# =========================
+*.bak
+*.orig
