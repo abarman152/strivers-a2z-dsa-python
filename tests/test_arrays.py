@@ -64,3 +64,40 @@ def test_second_largest_edge_cases():
 def test_second_largest_large_input():
     nums = list(range(100000))
     assert second_largest(nums) == 99998
+    
+# -------------------------------
+# Check if the array is sorted
+# -------------------------------
+
+
+from arrays.easy.arr_003_check_sorted_array import is_sorted
+
+
+@pytest.mark.check_sorted_array
+def test_sorted():
+    assert is_sorted([1, 2, 3, 4, 5]) is True
+
+
+@pytest.mark.check_sorted_array
+def test_not_sorted():
+    assert is_sorted([1, 2, 1, 4, 5]) is False
+
+
+@pytest.mark.check_sorted_array
+def test_single_element():
+    assert is_sorted([10]) is True
+
+
+@pytest.mark.check_sorted_array
+def test_all_equal():
+    assert is_sorted([2, 2, 2, 2]) is True
+
+
+@pytest.mark.check_sorted_array
+def test_descending():
+    assert is_sorted([5, 4, 3, 2, 1]) is False
+
+
+@pytest.mark.check_sorted_array
+def test_mixed():
+    assert is_sorted([1, 9, 6, 8, 5, 4, 0]) is False
