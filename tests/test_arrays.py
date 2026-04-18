@@ -156,3 +156,45 @@ def test_mixed_case():
     k = remove_duplicates(nums)
     assert k == 5
     assert nums[:k] == [-30, 0, 10, 20, 30]
+    
+
+# -------------------------------
+# Left rotate by one
+# -------------------------------
+
+from arrays.easy.arr_005_left_rotate_by_one import left_rotate_by_one
+
+
+@pytest.mark.left_rotate_by_one
+def test_basic_case():
+    nums = [1, 2, 3, 4, 5]
+    left_rotate_by_one(nums)
+    assert nums == [2, 3, 4, 5, 1]
+
+
+@pytest.mark.left_rotate_by_one
+def test_negative_values():
+    nums = [-1, 0, 3, 6]
+    left_rotate_by_one(nums)
+    assert nums == [0, 3, 6, -1]
+
+
+@pytest.mark.left_rotate_by_one
+def test_single_element():
+    nums = [10]
+    left_rotate_by_one(nums)
+    assert nums == [10]
+
+
+@pytest.mark.left_rotate_by_one
+def test_two_elements():
+    nums = [1, 2]
+    left_rotate_by_one(nums)
+    assert nums == [2, 1]
+
+
+@pytest.mark.left_rotate_by_one
+def test_given_case():
+    nums = [7, 6, 5, 4]
+    left_rotate_by_one(nums)
+    assert nums == [6, 5, 4, 7]
