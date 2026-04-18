@@ -101,3 +101,58 @@ def test_descending():
 @pytest.mark.check_sorted_array
 def test_mixed():
     assert is_sorted([1, 9, 6, 8, 5, 4, 0]) is False
+    
+    
+# -------------------------------
+# Remove duplicates elements
+# -------------------------------
+
+from arrays.easy.arr_004_remove_duplicates_sorted import remove_duplicates
+
+
+@pytest.mark.remove_duplicates
+def test_basic_case():
+    nums = [0, 0, 3, 3, 5, 6]
+    k = remove_duplicates(nums)
+    assert k == 4
+    assert nums[:k] == [0, 3, 5, 6]
+
+
+@pytest.mark.remove_duplicates
+def test_with_negatives():
+    nums = [-2, 2, 4, 4, 4, 4, 5, 5]
+    k = remove_duplicates(nums)
+    assert k == 4
+    assert nums[:k] == [-2, 2, 4, 5]
+
+
+@pytest.mark.remove_duplicates
+def test_all_duplicates():
+    nums = [1, 1, 1, 1]
+    k = remove_duplicates(nums)
+    assert k == 1
+    assert nums[:k] == [1]
+
+
+@pytest.mark.remove_duplicates
+def test_single_element():
+    nums = [10]
+    k = remove_duplicates(nums)
+    assert k == 1
+    assert nums[:k] == [10]
+
+
+@pytest.mark.remove_duplicates
+def test_no_duplicates():
+    nums = [1, 2, 3, 4]
+    k = remove_duplicates(nums)
+    assert k == 4
+    assert nums[:k] == [1, 2, 3, 4]
+
+
+@pytest.mark.remove_duplicates
+def test_mixed_case():
+    nums = [-30, -30, 0, 0, 10, 20, 30, 30]
+    k = remove_duplicates(nums)
+    assert k == 5
+    assert nums[:k] == [-30, 0, 10, 20, 30]
